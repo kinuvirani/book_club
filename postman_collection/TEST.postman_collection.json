@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "cc930cfc-cbb6-491e-bbd2-6f3cec1dc667",
+		"name": "TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3031/user/sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Kiran Reader\",\n    \"email\": \"kiran.reader2@yopmail.com\",\n    \"password\": \"Test@1234\",\n    \"role\": \"READER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/user/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/user/sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"kiran.reader1@yopmail.com\",\n    \"password\": \"Test@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/user/sign-in",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/book/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiUkVBREVSIiwibmFtZSI6IktpcmFuIFJlYWRlciIsImVtYWlsIjoia2lyYW4ucmVhZGVyMUB5b3BtYWlsLmNvbSIsInVzZXJfaWQiOjQsImlhdCI6MTYyNzY1NDUzNX0.0FJTWiQdVnl7vF0cIIjzhIn_EHkWgo-0i4HFAtwcKks",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test jul3\",\n    \"genres\": \"test\",\n    \"page_count\": 20,\n    \"brief_description\": \"Test july description3\",\n    \"published_date\": \"2021-12-31\",\n    \"is_download_allow\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/book/",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/book/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiUkVBREVSIiwibmFtZSI6IktpcmFuIFJlYWRlciIsImVtYWlsIjoia2lyYW4ucmVhZGVyMUB5b3BtYWlsLmNvbSIsInVzZXJfaWQiOjQsImlhdCI6MTYyNzcxOTY0NSwiZXhwIjoxNjI3NzIzMjQ1fQ.PS9otH7PqbZyXikDIKIGUdjuzlpHQ2SBZ_j96FCDCJc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"is_approved\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/book/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"book",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/bookmark",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiUkVBREVSIiwibmFtZSI6IktpcmFuIFJlYWRlciIsImVtYWlsIjoia2lyYW4ucmVhZGVyMkB5b3BtYWlsLmNvbSIsInVzZXJfaWQiOjUsImlhdCI6MTYyNzYzOTcxM30.HyxgWkPTu86N_e3YMDEL5rIIJu-dlHE2VsN-hpgbUvw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/bookmark",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"bookmark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/rating",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiUkVBREVSIiwibmFtZSI6IktpcmFuIFJlYWRlciIsImVtYWlsIjoia2lyYW4ucmVhZGVyMUB5b3BtYWlsLmNvbSIsInVzZXJfaWQiOjQsImlhdCI6MTYyNzY1MDM4Nn0.j9dZh0a7HFW0-NgMl7otA5eH8gOxwBbfUli3BvG-ZnU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 2,\n    \"rating\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/rating",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/book/2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQVVUSE9SIiwibmFtZSI6IktpcmFuIFZpcmFuaSIsImVtYWlsIjoia2lyYW5AeW9wbWFpbC5jb20iLCJ1c2VyX2lkIjoyLCJpYXQiOjE2Mjc1NjQ4MjN9.Zj6YG8kUqMmcl16Iqv0KnZitW4_ODWUkK_flxrVp63A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test212\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/book/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"book",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/book/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJuYW1lIjoiQWRtaW4gVXNlciIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjI3NzAzNTMwLCJleHAiOjE2Mjc3MDM1NDB9.xz4bqEUMl59SreRKV1ZAp2yfcA3E1QS5s6k5dzcPFcA",
+						"type": "text"
+					},
+					{
+						"key": "access",
+						"value": "public",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test jul3\",\n    \"genres\": \"test\",\n    \"page_count\": 20,\n    \"brief_description\": \"Test july description3\",\n    \"published_date\": \"2021-12-31\",\n    \"is_download_allow\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/book/",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"book",
+						""
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Virani",
+							"disabled": true
+						},
+						{
+							"key": "$skip",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "$limit",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/book/2/upload",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQVVUSE9SIiwibmFtZSI6IktpcmFuIFJlYWRlciIsImVtYWlsIjoia2lyYW4ucmVhZGVyQHlvcG1haWwuY29tIiwidXNlcl9pZCI6MywiaWF0IjoxNjI3NzIyNDQyLCJleHAiOjE2Mjc3MjYwNDJ9.sMdy_kBXUah2hwMxQkzlG4zJJxiYJ4v8kZ81102LgLs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pic",
+							"type": "file",
+							"src": "/home/lw-18/Downloads/KITCHEN_BEO-REPORT-07-28-2021-12-23-08.pdf"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/book/2/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"book",
+						"2",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3031/book/2/download",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiUkVBREVSIiwibmFtZSI6IktpcmFuIFJlYWRlciIsImVtYWlsIjoia2lyYW4ucmVhZGVyMUB5b3BtYWlsLmNvbSIsInVzZXJfaWQiOjQsImlhdCI6MTYyNzcyNzg5MSwiZXhwIjoxNjI3NzMxNDkxfQ.M7aq2gb5GJL1JWCxt7CbQWxzXH0s5RV5XcWxCXhVH88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pic",
+							"type": "file",
+							"src": "/home/lw-18/Downloads/KITCHEN_BEO-REPORT-07-28-2021-12-23-08.pdf"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3031/book/2/download",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"book",
+						"2",
+						"download"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
